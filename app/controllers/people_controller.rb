@@ -12,12 +12,12 @@ end
 
 #Sumit form by creating a new Person object, checks to see if valid data entered and redirect to show page when finished
 post '/people' do
-  if params[:birthdate].include?("-")
+    if params[:birthdate].include?("-") || params[:birthdate].blank?
     birthdate = params[:birthdate]
   else
     birthdate = Date.strptime(params[:birthdate], "%m%d%Y")
   end
-  
+    
   @person = Person.create(first_name: params[:first_name], last_name: params[:last_name], birthdate: birthdate)
   
   if @person.valid?
@@ -31,7 +31,7 @@ post '/people' do
   end
 end
 
-#Shows eidt a person page
+#Shows edit a person page
 get '/people/:id/edit' do
   @person = Person.find(params[:id])
   erb :"/people/edit"

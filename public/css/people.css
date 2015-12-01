@@ -1,5 +1,5 @@
 .new-person {
-background-image:url('forms-images/1000.142.7148.backgroundgray.jpg');
+background-image:url('images/1000.142.7148.backgroundgray.jpg');
 background-repeat:no-repeat;
 background-position: center top;
 /*background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));*/
@@ -70,9 +70,9 @@ box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
 }
   
 .edit-person{
-background-image:url('forms-images/1000.142.7147.background.jpg');
+background-image:url('images/1000.142.7147.background.jpg');
 background-repeat:no-repeat;
-background-position: top center;
+background-position: center top;
 /*background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));*/
 background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
 margin:40px auto;
