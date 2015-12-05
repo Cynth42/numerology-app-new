@@ -13,9 +13,10 @@ get '/' do
 end
 
 post '/' do
+   puts params.inspect
     
-    if params[:birthdate].blank? && params[:birthdate].include?("-")
-       birthdate = params[:birthdate].gsub("-","")
+    if !params[:birthdate].blank? && params[:birthdate].include?("-")
+       birthdate = params[:birthdate].gsub("-", "")
      
      elsif Person.valid_birthdate(birthdate)
         birth_path_num = Person.get_birth_path_num(birthdate)
