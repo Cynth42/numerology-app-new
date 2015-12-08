@@ -15,9 +15,7 @@ post '/people' do
   puts params.inspect
   
     if !params[:birthdate].blank? && params[:birthdate].include?("-")
-        birthdate = params[:birthdate]
-        else
-        birthdate = Date.strptime(params[:birthdate], "%m%d%Y")
+        birthdate = params[:birthdate].gsub("-", "")
     end
     
     @person = Person.new(first_name: params[:first_name], last_name: params[:last_name], birthdate: birthdate)
